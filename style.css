@@ -10,6 +10,7 @@
     --medium-gray: 216, 12%, 54%;
     --dark-blue: 213, 19%, 18%;
     --very-dark-blue: 216, 12%, 8%;
+    
 }
 
 * {
@@ -59,9 +60,19 @@ body {
     background: radial-gradient(circle at top, hsl(var(--dark-blue)), hsl(var(--very-dark-blue)));
     border-radius: 1rem;
     max-width: 26rem;
-    padding: 2rem;
+    aspect-ratio: 1 / 1;
+    padding: 0 2rem;
 
     margin-inline: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.thank-state {
+    align-items: center;
+    text-align: center;
 }
 
 @media screen and (max-width: 500px) {
@@ -98,9 +109,15 @@ h1 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     color: hsl(var(--medium-gray));
+}
+
+img {
+    display: block;
+    max-height: 6.25rem;
+    max-width: 10rem;
 }
 
 .number-container {
@@ -152,4 +169,13 @@ button {
 .button-submit:hover, .button-submit:focus-visible {
     background-color: hsl(var(--white));
     color: hsl(var(--orange));
+}
+
+.tag {
+    background-color: hsl(var(--dark-blue));
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: hsl(var(--orange));
+    font-size: 0.9rem;
 }
